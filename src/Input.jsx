@@ -9,7 +9,7 @@ function Input(props){
     return(
         <>
             <div className="form-control">
-                <input onKeyUp={check} className="form-control" type="text" />
+                <input onKeyUp={check} className="form-control bg-dark-subtle border border-info" type="text" />
             </div>
         </>
     )

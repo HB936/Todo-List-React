@@ -5,17 +5,17 @@ import Display from './Display'
 
 function App() {
   const [todo, setTodo] = useState([])
-  const addHandler=(value)=>{
+  const addHandler = (value) => {
     setTodo([...todo, value])
   }
 
-  const removeHandler=(vals)=>{
-    const filteredData=todo.filter(
-      (t,i) => {
-        if(i==vals){
+  const removeHandler = (vals) => {
+    const filteredData = todo.filter(
+      (t, i) => {
+        if (i == vals) {
           return false
         }
-        else{
+        else {
           return true
         }
       }
@@ -24,8 +24,11 @@ function App() {
   }
   return (
     <>
-      <Input addHandler={addHandler}/>
-      <Display items={todo} remHandler={removeHandler}/>
+      <div className="d-flex justify-content-center ">
+        <div className="h1">TODO LIST</div>
+      </div>
+      <Input addHandler={addHandler} />
+      <Display items={todo} remHandler={removeHandler} />
     </>
   )
 }
